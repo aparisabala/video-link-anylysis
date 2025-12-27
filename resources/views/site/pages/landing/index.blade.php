@@ -7,7 +7,7 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="swiper p-0">
+                        <div class="swiper p-0" onclick="window.location.href='{{url('slider/details')}}'">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img src="{{url('images/system/sld1.jpg')}}" class="img-fluid" />
@@ -36,7 +36,7 @@
                             <h5 class="text-center fs-13 mt-1"><span class="count-click" data-id="{{$item?->id}}"> {{$item?->name}} </span></h5>
                         </div>
                     @endforeach
-                    <div class="col-6 mb-3 cursor-pointer">
+                    <div class="col-6 mb-3 cursor-pointer" onclick="window.location.href='{{url('vip/details')}}'">
                         <div class="d-flex flex-row justify-content-center vip-base">
                             <img class="img-vip" src="{{url('images/system/vip.jpg')}}" class="w-100 h-100" />
                         </div>
