@@ -34,4 +34,8 @@
         height: 30px;
     }
 
+    .cursor-pointer {
+        cursor: pointer;
+    }
+
 </style>

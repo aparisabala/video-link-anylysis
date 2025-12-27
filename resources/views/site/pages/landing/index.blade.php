@@ -28,14 +28,14 @@
                 </div>
                 <div class="row">
                     @foreach ($data['items'] as $item)
-                        <div class="col-6 mb-3">
+                        <div class="col-6 mb-3 cursor-pointer onClickProduct" data-id="{{$item?->id}}">
                             <div>
                                 <img src="{{getRowImage(row: $item,col:'image', ext: '640X360')}}" class="img-fluid" />
                             </div>
                             <h5 class="text-center fs-13 mt-1"><span class="count-click" data-id="{{$item?->id}}"> {{$item?->name}} </span></h5>
                         </div>
                     @endforeach
-                    <div class="col-6 mb-3">
+                    <div class="col-6 mb-3 cursor-pointer">
                         <div class="d-flex flex-row justify-content-center vip-base">
                             <img class="img-vip" src="{{url('images/system/vip.jpg')}}" class="w-100 h-100" />
                         </div>

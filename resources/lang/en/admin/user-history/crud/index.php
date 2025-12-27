@@ -16,7 +16,7 @@ return [
         'id' => 'ID',
         'query_date' => 'Query Date',
         'user_ip' => 'IP',
-        'image' => 'Click Count',
+        'click_count' => 'Click Count',
         'created' => 'Created',
         'actions' => 'Actions',
     ]

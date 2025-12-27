@@ -8,20 +8,18 @@ $(document).ready(function(){
                 data: 'id',
                 title: table?.id
             },
-            /*{
-                data: null,
-                title: table?.serial,
-                class: 'text-center',
-                width: '200px',
-                render: function (data, type, row) {
-                    return `<input type="number" value="` + data.serial + `" class="form-control serial"><input type="hidden" value="` + data.id + `" class="form-control ids">`;
-                }
-            },*/
             {
-                data: 'name',
-                title: table?.name
+                data: 'query_date',
+                title: table?.query_date
             },
-
+            {
+                data: 'user_ip',
+                title: table?.user_ip
+            },
+            {
+                data: 'click_count',
+                title: table?.click_count
+            },
             {
                 data: 'created_at',
                 title: table?.created

@@ -16,5 +16,8 @@ return [
     'fields' => [
     ],
     'table' => [
+    ],
+    'text' => [
+        'link_not_found' => 'Reqeusted link not found in this server, try again'
     ]
 ];
