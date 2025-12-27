@@ -1,15 +1,15 @@
 $(document).ready(function(){
 
-    if($("#image").length > 0) {
-        PX?.initCropper('image',{
-           outputWidth: 640,
-           outputHeight: 360,
-           mimeType: 'image/jpeg',
-           maxFileSize: 200000,
-           boundingBox: { width: 200, height: 113 },
-           quality: 1
-       });
-    }
+    // if($("#image").length > 0) {
+    //     PX?.initCropper('image',{
+    //        outputWidth: 640,
+    //        outputHeight: 360,
+    //        mimeType: 'image/jpeg',
+    //        maxFileSize: 200000,
+    //        boundingBox: { width: 200, height: 113 },
+    //        quality: 1
+    //    });
+    // }
 
     if ($('#frmStoreVideoLink').length > 0) {
         let rules = {
@@ -60,7 +60,7 @@ $(document).ready(function(){
             script: 'admin/link-management/'+$("#patch_id").val(),
             rules,
             afterSuccess: {
-                type: 'inflate_response_data',
+                type: 'inflate_redirect_response_data',
             }
         });
     }

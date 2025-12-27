@@ -19,10 +19,6 @@ class  VideoLinkCrudRepository extends BaseRepository implements IVideoLinkCrudR
     use BaseTrait;
     public function __construct() {
         $this->LoadModels(['VideoLink']);
-         $this->sizes =  [
-            ['width'=> 640, 'height'=> 360,'com'=> 100],
-            ['width'=> 80, 'height'=> 80,'com'=> 100],
-        ];
     }
 
     /**
@@ -59,8 +55,8 @@ class  VideoLinkCrudRepository extends BaseRepository implements IVideoLinkCrudR
             return  Carbon::parse($item->created_at)->format('d-m-Y');
         })
         ->addColumn('image', function($item) {
-            $image = getRowImage(row: $item,col:'image', ext: '80X80');
-            return  "<img src='$image'  class='img-fluid'/>";
+            $image = getRowNoExtension(row: $item,col:'image');
+            return  "<img src='$image'  style='width: 80px; height: 80px;'/>";
         })
         ->escapeColumns([])
         ->make(true);
@@ -82,11 +78,7 @@ class  VideoLinkCrudRepository extends BaseRepository implements IVideoLinkCrudR
             if ($request->hasFile('image')) {
                 $image_link = (string) Uuid::generate(4);
                 $extension = $image->getClientOriginalExtension();
-                $image = $this->imageVersioning([
-                    'image' => $image, 'path' => $path, 'image_link' => $image_link, 'extension' => $extension,
-                    'appendSize' => true,
-                    'onlyAppend' => $this->sizes
-                ]);
+                $image->move($path,$image_link.'.'.$extension);
                 $insert['image'] = $image_link;
                 $insert['extension'] = $extension;
             }
@@ -127,19 +119,13 @@ class  VideoLinkCrudRepository extends BaseRepository implements IVideoLinkCrudR
             DB::beginTransaction();
             try {
                 if ($request->hasFile('image')) {
-                    $this->deleteImageVersions([
-                        'path' => imagePaths()['dyn_image'],
-                        'image_link' => $row->image,
-                        'extension' => $row->extension,
-                        'sizes' =>  $this->sizes
-                    ]);
+                    $imgPath = $path.$row?->image.'.'.$row?->extension;
+                    if(file_exists($imgPath)){
+                        File::delete($imgPath);
+                    }
                     $image_link = (string) Uuid::generate(4);
                     $extension = $image->getClientOriginalExtension();
-                    $image = $this->imageVersioning([
-                        'image' => $image, 'path' => $path, 'image_link' => $image_link, 'extension' => $extension,
-                        'appendSize' => true,
-                        'onlyAppend' => $this->sizes
-                    ]);
+                    $image->move($path,$image_link.'.'.$extension);
                     $row->image =  $image_link;
                     $row->extension = $extension;
                 }
@@ -226,13 +212,12 @@ class  VideoLinkCrudRepository extends BaseRepository implements IVideoLinkCrudR
             }
             DB::beginTransaction();
             try {
+                $path = imagePaths()['dyn_image'];
                 foreach ($i as $key => $value) {
-                    $this->deleteImageVersions([
-                        'path' => imagePaths()['dyn_image'],
-                        'image_link' => $value->image,
-                        'extension' => $value->extension,
-                        'sizes' =>  $this->sizes
-                    ]);
+                    $imgPath = $path.$value?->image.'.'.$value?->extension;
+                    if(file_exists($imgPath)){
+                        File::delete($imgPath);
+                    }
                     $value->delete();
                 }
                 $data['extraData'] = [

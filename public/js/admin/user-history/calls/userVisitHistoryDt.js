@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     if ($("#dtUserVisitHistory").length > 0) {
         const {pageLang={}} = PX?.config;
-        const {table={}} = pageLang;
+        const {table={},btns={}} = pageLang;
         let col_draft = [
             {
                 data: 'id',
@@ -40,7 +40,7 @@ $(document).ready(function(){
                 class: 'text-end',
                 render: function (data, type, row) {
                     return `<span class="btn btn-outline-secondary btn-sm edit" title="Edit">
-                        <i class="fas fa-pencil-alt"></i>
+                        ${btns?.check}
                     </span>`;
                 }
             },

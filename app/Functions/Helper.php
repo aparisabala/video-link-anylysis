@@ -29,6 +29,12 @@ function getRowImage($row,$col="image",$ext='80X80'){
     return ($row?->{$col} == null || !file_exists($path)) ? url('images/system/img.jpg') : url($path);
 }
 
+function getRowNoExtension($row,$col="image"){
+    $path = imagePaths()['dyn_image'].'/'.$row?->{$col}.'.'.$row?->extension;
+    return ($row?->{$col} == null || !file_exists($path)) ? url('images/system/img.jpg') : url($path);
+}
+
+
 
 if (! function_exists('pxLang')) {
     function pxLang($key='',$value='',$common='') {

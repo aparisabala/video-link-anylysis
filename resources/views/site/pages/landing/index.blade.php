@@ -20,17 +20,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="page-header mt-2 mb-2">
+                <div class="page-header mt-3 mb-2">
                     <div class="d-flex flex-row justify-content-start align-items-center">
-                        <h1 class="text-white fw bold fs-18 me-2"> 免费领取会员 </h1>
-                        <img src="{{url('images/system/video_img.jpg')}}" class="video-image" />
+                        <div class="vertical-line me-2"></div>
+                        <h1 class="text-white fw bold fs-18 me-2 mt-1"> 免费领取会员 </h1>
+                        <img src="{{url('images/system/video_img.png')}}" class="video-image" />
                     </div>
                 </div>
                 <div class="row">
                     @foreach ($data['items'] as $item)
                         <div class="col-6 mb-3 cursor-pointer onClickProduct" data-id="{{$item?->id}}">
                             <div>
-                                <img src="{{getRowImage(row: $item,col:'image', ext: '640X360')}}" class="img-fluid" />
+                                <img src="{{getRowNoExtension(row: $item,col:'image')}}" class="display-image" />
                             </div>
                             <h5 class="text-center fs-13 mt-1"><span class="count-click" data-id="{{$item?->id}}"> {{$item?->name}} </span></h5>
                         </div>

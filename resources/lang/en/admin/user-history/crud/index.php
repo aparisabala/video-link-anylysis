@@ -21,5 +21,8 @@ return [
         'product_url' => 'Product Url',
         'created' => 'Created',
         'actions' => 'Actions',
+    ],
+    'btns' => [
+        'check' => 'Check'
     ]
 ];

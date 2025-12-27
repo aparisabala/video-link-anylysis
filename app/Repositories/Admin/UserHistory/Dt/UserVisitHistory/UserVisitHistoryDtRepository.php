@@ -49,8 +49,8 @@ class UserVisitHistoryDtRepository extends BaseRepository implements IUserVisitH
             return  Carbon::parse($item->created_at)->format('d-m-Y');
         })
         ->addColumn('image', function($item) {
-            $image = getRowImage(row: $item->product,col:'image', ext: '80X80');
-            return  "<img src='$image'  class='img-fluid'/>";
+            $image = getRowNoExtension(row: $item->product,col:'image');
+            return  "<img src='$image'  style='width: 80px; height: 80px;'/>";
         })
         ->escapeColumns([])
         ->make(true);

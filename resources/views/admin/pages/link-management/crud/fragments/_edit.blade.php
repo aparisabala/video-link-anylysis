@@ -29,7 +29,11 @@
                                 </div>
                             </div>
                             <div>
-                                <img src="{{getRowImage(row: $data['item'],col:'image', ext: '80X80')}}" class="img-fluid" />
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <img src="{{getRowNoExtension(row: $data['item'],col:'image')}}" class="img-fluid" />
+                                    </div>
+                                </div>
                             </div>
                             <div class="form-group text-left mb-3">
                                 <label class="form-label"> <b>{{pxLang($data['lang'],'fields.content')}}</b> <em class="required">*</em> <span id="content_error"></span></label>

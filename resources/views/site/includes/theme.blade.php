@@ -21,10 +21,11 @@
             width: 450px;
         }
         .swiper img {
+            width: 100%;
             height: 230px;
         }
         .img-vip {
-            height: 120px;;
+            height: 120px;
             align-self: center;
         }
     }
@@ -38,4 +39,13 @@
         cursor: pointer;
     }
 
+   .vertical-line {
+        width: 5px;
+        height: 35px;
+        background: #ff7a00;
+    }
+    .display-image {
+        width: 100%;
+        height: 120px;
+    }
 </style>
