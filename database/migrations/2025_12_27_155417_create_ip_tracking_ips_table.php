@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('ip_tracking_id');
             $table->string('user_ip',25);
+            $table->unsignedInteger('click_count')->default(0);
             $table->timestamps();
         });
     }

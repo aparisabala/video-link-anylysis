@@ -51,11 +51,17 @@ class SiteLandingPostController extends Controller
                 [
                     'ip_tracking_id' => $tracking->id,
                     'user_ip'        => $ip,
+                ],
+                [
+                    'click_count' => 0,
                 ]
             );
             if ($ipInserted->wasRecentlyCreated) {
                 $tracking->increment('click_count');
+                $row->increment('unique_count');
             }
+            $ipInserted->increment('click_count');
+            $row->increment('total_click');
             $response['extraData'] = [
                 'inflate' => pxLang('','','common.action_success'),
                 'product' => $row

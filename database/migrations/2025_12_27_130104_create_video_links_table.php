@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('content');
             $table->text('keywords')->nullable();
             $table->string('status')->default('Active');
+            $table->bigInteger('unique_count')->default(0);
             $table->bigInteger('total_click')->default(0);
             $table->integer('serial');
             $table->timestamps();
