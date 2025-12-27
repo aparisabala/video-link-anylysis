@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ip_trackings', function (Blueprint $table) {
+        Schema::create('ip_tracking_ips', function (Blueprint $table) {
             $table->id();
-            $table->date('query_date');
-            $table->foreignId('video_link_id');
-            $table->integer('click_count')->default(0);
+            $table->foreignId('ip_tracking_id');
+            $table->string('user_ip',25);
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ip_trackings');
+        Schema::dropIfExists('ip_tracking_ips');
     }
 };

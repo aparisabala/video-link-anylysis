@@ -36,7 +36,7 @@ class UserVisitHistoryDtRepository extends BaseRepository implements IUserVisitH
      */
     public function list($request) : JsonResponse
     {
-        $model = IpTracking::query();
+        $model = IpTracking::with(['product'])->withCount('ips');
         $this->saveTractAction(
             $this->getTrackData(
                 title: 'IpTracking was viewed by '.$request?->auth?->name.' at '.Carbon::now()->format('d M Y H:i:s A'),
@@ -47,6 +47,10 @@ class UserVisitHistoryDtRepository extends BaseRepository implements IUserVisitH
         return DataTables::of($model)
         ->editColumn('created_at', function($item) {
             return  Carbon::parse($item->created_at)->format('d-m-Y');
+        })
+        ->addColumn('image', function($item) {
+            $image = getRowImage(row: $item->product,col:'image', ext: '80X80');
+            return  "<img src='$image'  class='img-fluid'/>";
         })
         ->escapeColumns([])
         ->make(true);

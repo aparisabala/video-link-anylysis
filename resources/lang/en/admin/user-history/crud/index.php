@@ -15,8 +15,10 @@ return [
     'table' => [
         'id' => 'ID',
         'query_date' => 'Query Date',
-        'user_ip' => 'IP',
+        'ips_count' => 'IP Count',
         'click_count' => 'Click Count',
+        'product_image' => 'Product Image',
+        'product_url' => 'Product Url',
         'created' => 'Created',
         'actions' => 'Actions',
     ]

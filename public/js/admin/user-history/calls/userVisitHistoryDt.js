@@ -13,8 +13,17 @@ $(document).ready(function(){
                 title: table?.query_date
             },
             {
-                data: 'user_ip',
-                title: table?.user_ip
+                data: 'image',
+                title: table?.product_image
+            },
+            {
+                data: 'product.product_url',
+                title: table?.product_url
+            },
+
+            {
+                data: 'ips_count',
+                title: table?.ips_count
             },
             {
                 data: 'click_count',

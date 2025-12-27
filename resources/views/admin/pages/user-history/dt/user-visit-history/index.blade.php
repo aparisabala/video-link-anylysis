@@ -4,7 +4,6 @@
         <div class="col-md-12">
             <div class="">
                 @include('admin.pages.user-history.dt.user-visit-history.fragments._breadcum')
-
                 <div class="page-block-body">
                     <div class="card rounded page-block">
 
