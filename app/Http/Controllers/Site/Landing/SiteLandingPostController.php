@@ -56,6 +56,13 @@ class SiteLandingPostController extends Controller
                 if($inIps != null) {
                     $an->click_count += 1;
                     $an->save();
+                    $row->total_click += 1;
+                    $row->save();
+                } else {
+                    $i = new IpTrackingIp;
+                    $i->ip_tracking_id = $an?->id;
+                    $i->user_ip = $ip;
+                    $i->save();
                 }
             }
             $response['extraData'] = [
