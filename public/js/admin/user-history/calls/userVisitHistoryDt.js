@@ -2,7 +2,15 @@ $(document).ready(function(){
 
     if ($("#dtUserVisitHistory").length > 0) {
         const {pageLang={}} = PX?.config;
-        const {table={},btns={}} = pageLang;
+        const {table={},btns={},text={}} = pageLang;
+        let trigVieIpList = {
+            body: {},
+            modalCallback: 'loadModal',
+            element: 'loadModal',
+            script: 'admin/user-history/dt/user-visit-history/user-ip-list/display',
+            title: text?.ip_list_title,
+            globLoader: false
+        };
         let col_draft = [
             {
                 data: 'id',
@@ -39,7 +47,12 @@ $(document).ready(function(){
                 title: table?.action,
                 class: 'text-end',
                 render: function (data, type, row) {
-                    return `<span class="btn btn-outline-secondary btn-sm edit" title="Edit">
+                    trigVieIpList = {
+                        ...trigVieIpList,
+                        body: {id: data?.id},
+                        title: text?.ip_list_title+"  - "+data?.product?.name
+                    };
+                    return `<span  data-bs-toggle='modal' data-bs-target='.editmodal' data-edit-prop='${JSON.stringify(trigVieIpList)}' class="btn btn-outline-info btn-sm edit" title="Edit">
                         ${btns?.check}
                     </span>`;
                 }

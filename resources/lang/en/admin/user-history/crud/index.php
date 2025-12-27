@@ -24,5 +24,8 @@ return [
     ],
     'btns' => [
         'check' => 'Check'
+    ],
+    'text' => [
+        'ip_list_title' => 'View Todays Product IPS'
     ]
 ];

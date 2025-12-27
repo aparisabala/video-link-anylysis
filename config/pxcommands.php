@@ -129,6 +129,7 @@ return [
         'admin.system.user' => 'admin/system/user/index',
         'site.landing.index' => 'site/landing/index',
         'admin.link-management.crud' => 'admin/link-management/crud/index',
-        'admin.user-history.crud' => 'admin/user-history/crud/index'
+        'admin.user-history.crud' => 'admin/user-history/crud/index',
+        'admin.user-history.dt.user-visit-history.modal.user-ip-list' => 'admin/user-history/dt/user-visit-history/modal/user-ip-list/index'
     ]
 ];
