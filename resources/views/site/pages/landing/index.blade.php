@@ -8,7 +8,7 @@
         <div class="col-md-12">
             <div class="wrap">
                 <div class="page-header">
-                    <h1> Header </h1>
+                    <h1 class="fw-bold text-white"> Header </h1>
                 </div>
                 <div class="row">
                     @foreach ($data['items'] as $item)
@@ -16,7 +16,7 @@
                             <div>
                                 <img src="https://placehold.co/640X360" class="img-fluid" />
                             </div>
-                            <h5><a href="#"> Title of the video</a></h5>
+                            <h5><a href="#"> Title of the video </a></h5>
                         </div>
                     @endforeach
                 </div>
