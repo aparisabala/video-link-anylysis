@@ -25,80 +25,89 @@
     </div>
     <hr style="border-bottom: 2px solid rgb(59, 59, 59);">
     <div class="row fs-16">
-        <div class="col-md-4">
-            <h5 class=" fw-bold">
-                <span> 快手/抖音 </span>
-                <span style="color: #FF00FF"> 评论 3个作品  </span>
-                <span> 免费领取永久会员 </span>
-            </h5>
-            <h5 class="fw-bold" style="color: #FF0000">1分钟完成即可</h5>
-            <h5 style="color: #FF0000">第一步：</h5>
-            <h5 style="color: #63D763">随便复制一条下面👇👇 蓝色字体内容，或者全部复制👇👇</h5>
-            <h5 style="color: #FF0000" class="mt-4">(按照操作百分之一百拿到免费会员顺手点个赞)</h5>
-            <h5 style="color: #FF0000" class="fw-bold"> 第二步: </h5>
-            <h5 class=" fw-bold">
-                <span style="color: #63D763"> 去 </span>
-                <span style="color: #FF00FF">
-                    快手 <span style="color: black"> - </span>
-                </span>
-                <span style="color: #FF00FF">
-                    抖音 <span style="color: black"> - </span>
-                </span>
-                <span style="color: #FF00FF">
-                    哔哩哔哩 <span style="color: black"> - </span>
-                </span>
-                <span style="color: #FF00FF">
-                    小红书
-                </span>
-                <span style="color: #63D763"> 搜索下面关键词 </span>
-            </h5>
-            <div class="text-center">
-                <i class="fa fa-arrow-down" style="color: #63D763"></i>
-                <i class="fa fa-arrow-down" style="color: #63D763"></i>
-                <i class="fa fa-arrow-down" style="color: #63D763"></i>
-                <i class="fa fa-arrow-down" style="color: #63D763"></i>
-                <i class="fa fa-arrow-down" style="color: #63D763"></i>
-            </div>
-            <div style="height: 120px;">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5 class=" fw-bold">
+                        <span> 快手/抖音 </span>
+                        <span style="color: #FF00FF"> 评论 3个作品  </span>
+                        <span> 免费领取永久会员 </span>
+                    </h5>
+                    <h5 class="fw-bold" style="color: #FF0000">1分钟完成即可</h5>
+                    <h5 style="color: #FF0000">第一步：</h5>
+                    <h5 style="color: #63D763">随便复制一条下面👇👇 蓝色字体内容，或者全部复制👇👇</h5>
+                    <h5 style="color: #FF0000" class="mt-4">(按照操作百分之一百拿到免费会员顺手点个赞)</h5>
+                    <h5 style="color: #FF0000" class="fw-bold"> 第二步: </h5>
+                    <h5 class=" fw-bold">
+                        <span style="color: #63D763"> 去 </span>
+                        <span style="color: #FF00FF">
+                            快手 <span style="color: black"> - </span>
+                        </span>
+                        <span style="color: #FF00FF">
+                            抖音 <span style="color: black"> - </span>
+                        </span>
+                        <span style="color: #FF00FF">
+                            哔哩哔哩 <span style="color: black"> - </span>
+                        </span>
+                        <span style="color: #FF00FF">
+                            小红书
+                        </span>
+                        <span style="color: #63D763"> 搜索下面关键词 </span>
+                    </h5>
 
+                    <div class="text-center">
+                        <i class="fa fa-arrow-down" style="color: #63D763"></i>
+                        <i class="fa fa-arrow-down" style="color: #63D763"></i>
+                        <i class="fa fa-arrow-down" style="color: #63D763"></i>
+                        <i class="fa fa-arrow-down" style="color: #63D763"></i>
+                        <i class="fa fa-arrow-down" style="color: #63D763"></i>
+                    </div>
+                </div>
             </div>
-            <div class="text-center">
-                <i class="fa fa-arrow-up" style="color: #63D763"></i>
-                <i class="fa fa-arrow-up" style="color: #63D763"></i>
-                <i class="fa fa-arrow-up" style="color: #63D763"></i>
-                <i class="fa fa-arrow-up" style="color: #63D763"></i>
-                <i class="fa fa-arrow-up" style="color: #63D763"></i>
+            <div class="text-center" style="height: 120px;">
+                 {{$data['keyWord']?->name}}
             </div>
-            <h5>
-                <span style="color: #63D763">
-                    搜索出来的视频
-                </span>
-                <span style="color: #FF00FF">
-                    评论3个视频
-                </span>
-            </h5>
-            <h5 style="color: #FF0000"> 快手评论完，记得去➡️抖音➡️哔哩哔哩➡️小红书评论一下哦</h5>
-            <h5 style="color: #FF0000"> 不懂的看下图</h5>
-            <h5 style="color: #FF0000"> 下方图片教程仅作为参考，具体评论上方的文字即可。 </h5>
-            <h5 style="color: #63D763"> 1.搜索 </h5>
-            <div class="mb-2">
-                <img src="{{url('images/system/img_one.jpg')}}" class="img-fluid" />
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <i class="fa fa-arrow-up" style="color: #63D763"></i>
+                        <i class="fa fa-arrow-up" style="color: #63D763"></i>
+                        <i class="fa fa-arrow-up" style="color: #63D763"></i>
+                        <i class="fa fa-arrow-up" style="color: #63D763"></i>
+                        <i class="fa fa-arrow-up" style="color: #63D763"></i>
+                    </div>
+                    <h5>
+                        <span style="color: #63D763">
+                            搜索出来的视频
+                        </span>
+                        <span style="color: #FF00FF">
+                            评论3个视频
+                        </span>
+                    </h5>
+                    <h5 style="color: #FF0000"> 快手评论完，记得去➡️抖音➡️哔哩哔哩➡️小红书评论一下哦</h5>
+                    <h5 style="color: #FF0000"> 不懂的看下图</h5>
+                    <h5 style="color: #FF0000"> 下方图片教程仅作为参考，具体评论上方的文字即可。 </h5>
+                    <h5 style="color: #63D763"> 1.搜索 </h5>
+                    <div class="mb-2">
+                        <img src="{{url('images/system/img_one.jpg')}}" class="img-fluid" />
+                    </div>
+                    <h5 style="color: #63D763"> 评论成功 </h5>
+                    <div class="mb-2">
+                        <img src="{{url('images/system/img_two.jpg')}}" class="img-fluid" />
+                    </div>
+                    <h5 style="color: #63D763"> ↓↓↓点下面客服入口发3张评论截图领取↓↓↓ </h5>
+                    <div class="mb-2">
+                        <img src="{{url('images/system/img_btn.jpg')}}" class="img-fluid" />
+                    </div>
+                    <h5 style="color: #63D763">客服入口示图:</h5>
+                    <div class="mb-2">
+                        <img src="{{url('images/system/image_three.jpg')}}" class="img-fluid" />
+                    </div>
+                    <h5 style="color: #63D763">↑↑↑评论完截图给客服领永久会员↑↑↑</h5>
+                    <h5 style="color: #63D763">温馨提醒）领取完会员后请保管好会员账号密码。</h5>
+                    <h5 style="color: #FF0000">注意:先评论再联系客服，删评论者，系统无法检测到，否则领取不到</h5>
+                </div>
             </div>
-            <h5 style="color: #63D763"> 评论成功 </h5>
-            <div class="mb-2">
-                <img src="{{url('images/system/img_two.jpg')}}" class="img-fluid" />
-            </div>
-            <h5 style="color: #63D763"> ↓↓↓点下面客服入口发3张评论截图领取↓↓↓ </h5>
-            <div class="mb-2">
-                <img src="{{url('images/system/img_btn.jpg')}}" class="img-fluid" />
-            </div>
-            <h5 style="color: #63D763">客服入口示图:</h5>
-             <div class="mb-2">
-                <img src="{{url('images/system/image_three.jpg')}}" class="img-fluid" />
-            </div>
-            <h5 style="color: #63D763">↑↑↑评论完截图给客服领永久会员↑↑↑</h5>
-            <h5 style="color: #63D763">温馨提醒）领取完会员后请保管好会员账号密码。</h5>
-            <h5 style="color: #FF0000">注意:先评论再联系客服，删评论者，系统无法检测到，否则领取不到</h5>
         </div>
     </div>
 </div>

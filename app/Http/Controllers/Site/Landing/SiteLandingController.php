@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Site\Landing;
 
 use App\Http\Controllers\Controller;
+use App\Models\DataKeyword;
 use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Contracts\View\View;
@@ -40,6 +41,7 @@ class SiteLandingController extends Controller
     {
         $data['lang'] = $this->lang;
         $data = [...$data,...$this->iSiteLandingRepo->display($request)];
+        $data['keyWord'] = DataKeyword::take(1)->inRandomOrder()->first();
         return view('site.pages.vip.index')->with('data',$data);
     }
      /**
@@ -52,6 +54,7 @@ class SiteLandingController extends Controller
     {
         $data['lang'] = $this->lang;
         $data = [...$data,...$this->iSiteLandingRepo->display($request)];
+        $data['keyWord'] = DataKeyword::take(1)->inRandomOrder()->first();
         return view('site.pages.slider.index')->with('data',$data);
     }
 

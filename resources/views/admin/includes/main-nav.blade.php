@@ -41,6 +41,12 @@
                         <span>{{pxLang('admin.main-nav','lik-manage.menu')}}</span>
                     </a>
                 </li>
+                <li class="">
+                    <a href="{{url('admin/keyword')}}" class="">
+                        <i class="fa-solid fa-link"></i>
+                        <span>{{pxLang('admin.main-nav','keywords.menu')}}</span>
+                    </a>
+                </li>
                 {{--<li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="bx bxs-cog"></i>
