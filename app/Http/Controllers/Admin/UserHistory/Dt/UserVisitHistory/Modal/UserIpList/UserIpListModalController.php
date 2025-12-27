@@ -13,7 +13,7 @@ class UserIpListModalController extends Controller {
 
     use BaseTrait;
     public function __construct(private IUserIpListRepository $iUserIpListRepo) {
-        $this->middleware(['auth:admin','HasAdminUserPassword','HasAdminUserAuth']);
+        $this->middleware(['auth:admin','HasAdminUserPassword','HasAdminUserAuth','SetAdminLanguage']);
         $this->lang= 'admin.user-history.dt.user-visit-history.modal.user-ip-list';
         $this->middleware(function ($request, $next) {
             $request->merge(['lang' => $this->lang]);

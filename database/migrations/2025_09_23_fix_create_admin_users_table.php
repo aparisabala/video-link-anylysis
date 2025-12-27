@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('setup_done',5)->default('no');
             $table->string('is_secret',5)->default('no');
             $table->string('reset_code',7)->nullable();
+            $table->string('local',7)->default('en');
             $table->dateTime('sent_at')->nullable();
             $table->json('user_access')->nullable();
             $table->rememberToken();

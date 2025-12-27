@@ -22,7 +22,7 @@ class AdminUserSetupController extends Controller
     use BaseTrait;
     public function __construct()
     {
-       $this->middleware(['auth:admin','HasAdminUserAuth']);
+       $this->middleware(['auth:admin','HasAdminUserAuth','SetAdminLanguage']);
        $this->sizes =  [
             ['width'=>300, 'height'=> 300,'com'=> 90],
             ['width'=>80, 'height'=> 80,'com'=> 100],

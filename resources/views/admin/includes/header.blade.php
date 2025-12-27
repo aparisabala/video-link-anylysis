@@ -27,6 +27,17 @@
         </div>
         <div class="d-flex">
             <div class="dropdown d-inline-block">
+                <button type="button" class="btn header-item noti-icon waves-effect dl-" id="langNoti" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="d-flex flex-row justify-content-center align-items-center">
+                        <span class="me-2">{{viewLanguage(Auth::user()->local)}}</span> <i class="bx bx-globe"></i>
+                    </div>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="{{url('admin/lang/cn')}}"> Chinese  </a>
+                    <a class="dropdown-item" href="{{url('admin/lang/bn')}}"> English </span></a>
+                </div>
+            </div>
+            <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="bx bx-bell"></i>
                     <span class="badge bg-danger rounded-pill" id="notiCount">0</span>

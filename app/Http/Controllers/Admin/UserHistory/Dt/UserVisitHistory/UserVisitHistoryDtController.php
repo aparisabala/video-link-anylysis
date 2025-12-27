@@ -11,7 +11,7 @@ class UserVisitHistoryDtController extends Controller {
 
     use BaseTrait;
     public function __construct(private IUserVisitHistoryDtRepository $iUserVisitHistoryDtRepo) {
-        $this->middleware(['auth:admin','HasAdminUserPassword','HasAdminUserAuth']);
+        $this->middleware(['auth:admin','HasAdminUserPassword','HasAdminUserAuth','SetAdminLanguage']);
         $this->lang= 'admin.user-history.crud';
         $this->middleware(function ($request, $next) {
             $request->merge(['lang' => $this->lang]);
