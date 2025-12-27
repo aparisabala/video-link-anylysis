@@ -26,6 +26,8 @@ return [
         'check' => 'Check'
     ],
     'text' => [
-        'ip_list_title' => 'View Todays Product IPS'
+        'ip_list_title' => 'View Todays Product IPS',
+        'total_click' => 'Total Click:',
+        'total_ip' => 'Total IP:'
     ]
 ];

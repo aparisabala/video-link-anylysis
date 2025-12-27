@@ -26,6 +26,8 @@ return [
         'check' => '查看'
     ],
     'text' => [
-        'ip_list_title' => '查看今日产品 IP 列表'
+        'ip_list_title' => '查看今日产品 IP 列表',
+        'total_click' => '总点击量：',
+        'total_ip' => '总 IP：'
     ]
 ];

@@ -6,9 +6,10 @@
                 @include('admin.pages.user-history.dt.user-visit-history.fragments._breadcum')
                 <div class="page-block-body">
                     <div class="card rounded page-block">
-
                         <div id="defaultPage" class="table-list pages">
                             <div class="mt-2 p-2 p-md-4">
+                                <h1> {{pxLang($data['lang'],'text.total_click')}} {{number_format($data['total_click'])}} | {{pxLang($data['lang'],'text.total_ip')}} {{number_format($data['total_ip'])}}</h1>
+                                <hr>
                                 <input type="hidden" id="page-lang" value="{{ json_encode(Lang::get(config('pxcommands.language')[$data['lang']])) }}" />
                                 @if(count($data['items']) > 0)
                                     @include('common.view.fragments._show-selected')

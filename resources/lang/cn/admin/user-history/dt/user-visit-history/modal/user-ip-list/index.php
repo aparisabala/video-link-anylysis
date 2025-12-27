@@ -22,5 +22,9 @@ return [
         'click_count' => '总点击量',
         'created' => '创建时间',
         'actions' => '操作',
+    ],
+    'text' => [
+        'total_click' => '总点击量：',
+        'total_ip' => '总 IP：'
     ]
 ];

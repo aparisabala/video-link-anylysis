@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Admin\UserHistory\Dt\UserVisitHistory;
 use App\Http\Controllers\Controller;
+use App\Models\IpTracking;
+use App\Models\IpTrackingIp;
 use App\Repositories\Admin\UserHistory\Dt\UserVisitHistory\IUserVisitHistoryDtRepository;
 use App\Traits\BaseTrait;
+use Carbon\Carbon;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -30,6 +33,10 @@ class UserVisitHistoryDtController extends Controller {
     {
         $data = $this->iUserVisitHistoryDtRepo->index($request);
         $data['lang'] = $this->lang;
+        $date = Carbon::now()->format('Y-m-d');
+        $data['total_click'] = IpTracking::where([['query_date','=',$date]])->sum('click_count');
+        $data['ids'] = IpTracking::where([['query_date','=',$date]])->pluck('id')->toArray();
+        $data['total_ip'] = IpTrackingIp::whereIn('ip_tracking_id',$data['ids'])->count();
         return view('admin.pages.user-history.dt.user-visit-history.index',compact('data'));
     }
 
