@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'dashboard' => 'Dashboard',
-    'user-ana.menu' => 'User Analytics',
-    'lik-manage.menu' => 'Link Management',
-    'system.core' => 'System Core',
-    'system.core.user_role' => 'User Roles',
-    'system.core.user' => 'Users',
-    'system.core.user_policy' => 'User Policies'
+    'dashboard' => '仪表盘',
+    'user-ana.menu' => '用户分析',
+    'lik-manage.menu' => '链接管理',
+    'system.core' => '系统核心',
+    'system.core.user_role' => '用户角色',
+    'system.core.user' => '用户',
+    'system.core.user_policy' => '用户策略',
 ];

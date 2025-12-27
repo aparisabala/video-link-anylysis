@@ -26,18 +26,6 @@
                                     <input type="file" class="form-control" name="image" id="image"/>
                                 </div>
                             </div>
-                            <div class="form-group text-left mb-3">
-                                <label class="form-label"> <b>{{pxLang($data['lang'],'fields.content')}}</b> <em class="required">*</em> <span id="content_error"></span></label>
-                                <div class="input-group">
-                                    <textarea rows="4"  class="form-control" name="content" id="content"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group text-left mb-3">
-                                <label class="form-label"> <b>{{pxLang($data['lang'],'fields.keywords')}}</b> <em class="required">*</em> <span id="keywords_error"></span></label>
-                                <div class="input-group">
-                                    <textarea rows="4"  class="form-control" name="keywords" id="keywords"></textarea>
-                                </div>
-                            </div>
                             <div class="mb-3 mt-3 text-end">
                                 <button class="btn btn-info btn-sm" type="submit"><i class="fa fa-plus"></i> {{pxLang($data['lang'],'','common.btns.crud_action_add')}} </button>
                             </div>

@@ -11,16 +11,16 @@ return [
         'b3' => ''
     ],
     'nav' => [
-        'item1' => ' crud'
+        'item1' => 'CRUD'
     ],
     'fields' => [
-        'name' => 'Name',
+        'name' => '名称',
     ],
     'table' => [
         'id' => 'ID',
-        'user_ip' => 'IP Address',
-        'click_count' => 'Total Click',
-        'created' => 'Created',
-        'actions' => 'Actions',
+        'user_ip' => 'IP 地址',
+        'click_count' => '总点击量',
+        'created' => '创建时间',
+        'actions' => '操作',
     ]
 ];

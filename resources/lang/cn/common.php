@@ -51,7 +51,6 @@ return [
 		'cancel' => '取消',
 		'select_file' => '选择文件',
 	],
-
 	'text' => [
 		'option_select' => '请选择',
         'no_items' => [

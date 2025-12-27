@@ -1,31 +1,31 @@
 <?php
 return [
-    'pageTitle' => 'User Tracking',
+    'pageTitle' => '用户追踪',
     'pageSubTitle' => '',
-    'add' => 'Add new link',
-    'update' => 'Update lik',
+    'add' => '添加新链接',
+    'update' => '更新链接',
     'breadCum' => [
-        'title' => 'User Tracking',
-        'b1' => 'User Tracking',
-        'b2' => 'Manage',
+        'title' => '用户追踪',
+        'b1' => '用户追踪',
+        'b2' => '管理',
         'b3' => ''
     ],
     'fields' => [
     ],
     'table' => [
         'id' => 'ID',
-        'query_date' => 'Query Date',
-        'ips_count' => 'IP Count',
-        'click_count' => 'Click Count',
-        'product_image' => 'Product Image',
-        'product_url' => 'Product Url',
-        'created' => 'Created',
-        'actions' => 'Actions',
+        'query_date' => '查询日期',
+        'ips_count' => 'IP 数量',
+        'click_count' => '点击次数',
+        'product_image' => '产品图片',
+        'product_url' => '产品链接',
+        'created' => '创建时间',
+        'actions' => '操作',
     ],
     'btns' => [
-        'check' => 'Check'
+        'check' => '查看'
     ],
     'text' => [
-        'ip_list_title' => 'View Todays Product IPS'
+        'ip_list_title' => '查看今日产品 IP 列表'
     ]
 ];

@@ -35,18 +35,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group text-left mb-3">
-                                <label class="form-label"> <b>{{pxLang($data['lang'],'fields.content')}}</b> <em class="required">*</em> <span id="content_error"></span></label>
-                                <div class="input-group">
-                                    <textarea rows="4"  class="form-control" name="content" id="content">{{$data['item']?->content}}</textarea>
-                                </div>
-                            </div>
-                            <div class="form-group text-left mb-3">
-                                <label class="form-label"> <b>{{pxLang($data['lang'],'fields.keywords')}}</b> <em class="required">*</em> <span id="keywords_error"></span></label>
-                                <div class="input-group">
-                                    <textarea rows="4"  class="form-control" name="keywords" id="keywords">{{$data['item']?->keywords}}</textarea>
-                                </div>
-                            </div>
                             <div class="mb-3 mt-3 text-end">
                                 <button class="btn btn-info btn-sm" type="submit"><i class="fa fa-save"></i> {{pxLang($data['lang'],'','common.btns.crud_action_update')}} </button>
                             </div>

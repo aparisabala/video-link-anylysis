@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'info' => 'Update Info',
-    'password' => 'Update Password'
+    'info' => '更新信息',
+    'password' => '更新密码'
 ];

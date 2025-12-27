@@ -11,7 +11,7 @@ return [
         'b3' => ''
     ],
     'mgs' => [
-        'logout_sucess' => 'Succesfully logged out from the system',
+        'logout_sucess' => '已成功退出系统',
     ],
     'fields' => [
     ],
