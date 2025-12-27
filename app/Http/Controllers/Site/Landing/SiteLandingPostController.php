@@ -51,11 +51,13 @@ class SiteLandingPostController extends Controller
                 $i->save();
                 $row->total_click += 1;
                 $row->save();
+            } else {
+                $inIps = IpTrackingIp::where([['user_ip','=',$ip],['ip_tracking_id','=',$an?->id]])->first();
+                if($inIps != null) {
+                    $an->click_count += 1;
+                    $an->save();
+                }
             }
-            // else {
-            //     $an->click_count += 1;
-            //     $an->save();
-            // }
             $response['extraData'] = [
                 'inflate' => pxLang('','','common.action_success'),
                 'product' => $row
