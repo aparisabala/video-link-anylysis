@@ -32,7 +32,7 @@ class ValidateStoreVideoLink extends FormRequest
             'name' => 'required|string|max:253|unique:video_links,name',
             'product_url' => 'required|string|url|max:253',
             'image' => 'required|file|mimes:png,jpg,JPEG,JPG,webp|max:2048',
-            'content' => 'required|string',
+            'content' => 'nullable|string',
             'keywords' => 'nullable|string|max:253',
         ];
     }

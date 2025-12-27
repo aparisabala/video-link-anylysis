@@ -26,10 +26,8 @@ $(document).ready(function(){
                 maxlength: 253
             },
             content: {
-                required: true,
-                maxlength: 253
+                required: false,
             }
-
         };
         PX.ajaxRequest({
             element: 'frmStoreVideoLink',
@@ -53,8 +51,7 @@ $(document).ready(function(){
                 maxlength: 253
             },
             content: {
-                required: true,
-                maxlength: 253
+                required: false,
             }
         };
         PX.ajaxRequest({
