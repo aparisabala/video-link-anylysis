@@ -44,7 +44,8 @@ return [
                     'dashboard',
                     'setup',
                     'reset',
-                    'link-management'
+                    'link-management',
+                    'user-history'
                 ]
             ]
         ],
@@ -114,7 +115,7 @@ return [
             'pdfmake' => '<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/pdfmake.min.js" integrity="sha512-axXaF5grZBaYl7qiM6OMHgsgVXdSLxqq0w7F4CQxuFyrcPmn0JfnqsOtYHUun80g6mRRdvJDrTCyL8LQqBOt/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>',
             'xlsx' => '<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.core.min.js" integrity="sha512-UhlYw//T419BPq/emC5xSZzkjjreRfN3426517rfsg/XIEC02ggQBb680V0VvP+zaDZ78zqse3rqnnI5EJ6rxA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>',
             'dateTimePicker' => '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>',
-            'swipper' =>  '<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>'
+            'swipper' => '<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>'
         ]
     ],
     'language' => [
@@ -127,6 +128,7 @@ return [
         'admin.user.nav' => 'admin/setup/navs/index',
         'admin.system.user' => 'admin/system/user/index',
         'site.landing.index' => 'site/landing/index',
-        'admin.link-management.crud' => 'admin/link-management/crud/index'
+        'admin.link-management.crud' => 'admin/link-management/crud/index',
+        'admin.user-history.crud' => 'admin/user-history/crud/index'
     ]
 ];

@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('ip_trackings', function (Blueprint $table) {
             $table->id();
             $table->date('query_date');
-            $table->string('user_id',25);
-            $table->integer('client_count')->default(0);
+            $table->string('user_ip',25);
+            $table->integer('click_count')->default(0);
             $table->timestamps();
         });
     }

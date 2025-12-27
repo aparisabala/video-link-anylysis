@@ -30,6 +30,12 @@
                     </a>
                 </li>
                 <li class="">
+                    <a href="{{url('admin/user-history/user-visit-history/list')}}" class="">
+                        <i class="fa fa-bar-chart"></i>
+                        <span>{{pxLang('admin.main-nav','user-ana.menu')}}</span>
+                    </a>
+                </li>
+                <li class="">
                     <a href="{{url('admin/link-management')}}" class="">
                         <i class="fa-solid fa-link"></i>
                         <span>{{pxLang('admin.main-nav','lik-manage.menu')}}</span>
