@@ -46,6 +46,47 @@ return [
                     'reset'
                 ]
             ]
+        ],
+        'site' => [
+            'styles' => [
+                'cdns' => [
+                    'bootstrap5',
+                    'fontAwesome',
+                    'boxIcon',
+                    'jqConfirm',
+                    'datatable5'
+                ],
+                'local' => [
+                    'px',
+                    'site',
+                ],
+                'conditional' => [
+
+                ]
+            ],
+            'scripts' => [
+                'cdns' => [
+                    'jq',
+                    'bootstrap5',
+                    'popper',
+                    'fontAwesome',
+                    'boxIcon',
+                    'jqConfirm',
+                    'datatable5',
+                    'dataTableSelectCheckbox',
+                    'pdfmake',
+                    'xlsx',
+                    'dateTimePicker'
+                ],
+                'local' => [
+                    'px',
+                    'site/theme',
+                    'panel/blank-theme'
+                ],
+                'conditional' => [
+                    'site/landing'
+                ]
+            ]
         ]
     ],
     'styles' => [
@@ -80,6 +121,7 @@ return [
         'admin.user.update' => 'admin/setup/user/index',
         'admin.user.pass.update' => 'admin/setup/pass/index',
         'admin.user.nav' => 'admin/setup/navs/index',
-        'admin.system.user' => 'admin/system/user/index'
+        'admin.system.user' => 'admin/system/user/index',
+        'site.landing.index' => 'site/landing/index'
     ]
 ];

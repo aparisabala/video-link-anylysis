@@ -1,4 +1,12 @@
 $(document).ready(function(){
+    PX?.initCropper('image',{
+        outputWidth: 400,
+        outputHeight: 400,
+        mimeType: 'image/jpeg',
+        maxFileSize: 100000,
+        boundingBox: { width: 250, height: 250 },
+        quality: 1
+    });
     if($("#frmUpdateAdminUserSetupProfile").length > 0) {
         let rules = {
             name: {
