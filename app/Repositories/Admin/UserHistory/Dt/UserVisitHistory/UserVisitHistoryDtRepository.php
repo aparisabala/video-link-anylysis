@@ -52,6 +52,15 @@ class UserVisitHistoryDtRepository extends BaseRepository implements IUserVisitH
             $image = getRowNoExtension(row: $item->product,col:'image');
             return  "<img src='$image'  style='width: 80px; height: 80px;'/>";
         })
+        ->addColumn('ips_count', function($item) {
+            return $item->ips_count; // comes from withCount('ips')
+        })
+        ->orderColumn('ips_count', function($query, $order) {
+            $query->orderBy('ips_count', $order);
+        })
+        ->filterColumn('ips_count', function($query, $keyword) {
+            $query->having('ips_count', 'like', "%{$keyword}%");
+        })
         ->escapeColumns([])
         ->make(true);
     }
