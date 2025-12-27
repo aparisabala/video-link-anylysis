@@ -36,34 +36,25 @@ class SiteLandingPostController extends Controller
         }
         $date = Carbon::now()->format('Y-m-d');
         $ip = $request->ip();
-        $an = IpTracking::where([['query_date','=',$date],['video_link_id','=',$row->id]])->first();
         DB::beginTransaction();
         try {
-            if($an == null) {
-                $an =  new IpTracking;
-                $an->query_date = $date;
-                $an->video_link_id = $row->id;
-                $an->click_count += 1;
-                $an->save();
-                $i = new IpTrackingIp;
-                $i->ip_tracking_id = $an?->id;
-                $i->user_ip = $ip;
-                $i->save();
-                $row->total_click += 1;
-                $row->save();
-            } else {
-                $inIps = IpTrackingIp::where([['user_ip','=',$ip],['ip_tracking_id','=',$an?->id]])->first();
-                if($inIps != null) {
-                    $an->click_count += 1;
-                    $an->save();
-                    $row->total_click += 1;
-                    $row->save();
-                } else {
-                    $i = new IpTrackingIp;
-                    $i->ip_tracking_id = $an?->id;
-                    $i->user_ip = $ip;
-                    $i->save();
-                }
+            $tracking = IpTracking::firstOrCreate(
+                [
+                    'query_date'    => $date,
+                    'video_link_id' => $row?->id,
+                ],
+                [
+                    'click_count' => 0,
+                ]
+            );
+            $ipInserted = IpTrackingIp::firstOrCreate(
+                [
+                    'ip_tracking_id' => $tracking->id,
+                    'user_ip'        => $ip,
+                ]
+            );
+            if ($ipInserted->wasRecentlyCreated) {
+                $tracking->increment('click_count');
             }
             $response['extraData'] = [
                 'inflate' => pxLang('','','common.action_success'),
