@@ -95,6 +95,10 @@ $(document).ready(function(){
                 title: table?.product_url
             },
             {
+                data: 'unique_count',
+                title: table?.unique_count
+            },
+            {
                 data: 'total_click',
                 title: table?.total_click
             },

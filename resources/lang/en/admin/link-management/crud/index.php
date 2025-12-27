@@ -25,6 +25,7 @@ return [
         'content' => 'Details',
         'keywords' => 'Keywords',
         'total_click' => 'Total Click',
+        'unique_count' => 'Unique Click',
         'created' => 'Created',
         'actions' => 'Actions',
     ]
