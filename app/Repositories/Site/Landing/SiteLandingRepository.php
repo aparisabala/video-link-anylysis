@@ -2,9 +2,10 @@
 
 namespace App\Repositories\Site\Landing;
 
+use App\Models\VideoLink;
 use App\Repositories\BaseRepository;
 
-class SiteLandingRepository  extends BaseRepository implements ISiteLandingRepository 
+class SiteLandingRepository  extends BaseRepository implements ISiteLandingRepository
 {
 
     /**
@@ -16,6 +17,7 @@ class SiteLandingRepository  extends BaseRepository implements ISiteLandingRepos
     public function display($request) : array
     {
         $data['item'] = null;
+        $data['items'] = VideoLink::orderBy('serial','ASC')->take(25)->get();
         return $data;
     }
 }

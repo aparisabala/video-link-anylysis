@@ -43,7 +43,8 @@ return [
                     'login',
                     'dashboard',
                     'setup',
-                    'reset'
+                    'reset',
+                    'link-management'
                 ]
             ]
         ],
@@ -58,7 +59,7 @@ return [
                 ],
                 'local' => [
                     'px',
-                    'site',
+                    'site'
                 ],
                 'conditional' => [
 
@@ -122,6 +123,7 @@ return [
         'admin.user.pass.update' => 'admin/setup/pass/index',
         'admin.user.nav' => 'admin/setup/navs/index',
         'admin.system.user' => 'admin/system/user/index',
-        'site.landing.index' => 'site/landing/index'
+        'site.landing.index' => 'site/landing/index',
+        'admin.link-management.crud' => 'admin/link-management/crud/index'
     ]
 ];

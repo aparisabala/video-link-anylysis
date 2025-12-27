@@ -24,11 +24,11 @@ function imageExists($row,$ext='80X80'){
     return ($row?->image == null || !file_exists($path)) ? false : true;
 }
 
-function getRowImage($row,$ext='80X80'){
-    $path = imagePaths()['dyn_image'].'/'.$row?->image.'_'.$ext.'.'.$row?->extension;
-    $img = ($row?->image == "" || !file_exists($path)) ? url('images/system/img.jpg') : url($path);
-    return $img;
+function getRowImage($row,$col="image",$ext='80X80'){
+    $path = imagePaths()['dyn_image'].'/'.$row?->{$col}.'_'.$ext.'.'.$row?->extension;
+    return $path;
 }
+
 
 if (! function_exists('pxLang')) {
     function pxLang($key='',$value='',$common='') {
