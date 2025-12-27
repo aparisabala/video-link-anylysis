@@ -28,5 +28,10 @@
             align-self: center;
         }
     }
+    .video-image {
+        background-color: transparent;
+        width: 30px;
+        height: 30px;
+    }
 
 </style>

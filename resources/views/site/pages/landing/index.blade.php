@@ -4,8 +4,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="wrap">
-                <div class="page-header">
-                </div>
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="swiper p-0">
@@ -21,20 +20,26 @@
                         </div>
                     </div>
                 </div>
+                <div class="page-header mt-2 mb-2">
+                    <div class="d-flex flex-row justify-content-start align-items-center">
+                        <h1 class="text-white fw bold fs-18 me-2"> 免费领取会员 </h1>
+                        <img src="{{url('images/system/video_img.jpg')}}" class="video-image" />
+                    </div>
+                </div>
                 <div class="row">
                     @foreach ($data['items'] as $item)
-                        <div class="col-6 mb-3 mt-2">
+                        <div class="col-6 mb-3">
                             <div>
                                 <img src="{{getRowImage(row: $item,col:'image', ext: '640X360')}}" class="img-fluid" />
                             </div>
-                            <h5 class="text-center fs-13"><span class="count-click" data-id="{{$item?->id}}"> {{$item?->name}} </span></h5>
+                            <h5 class="text-center fs-13 mt-1"><span class="count-click" data-id="{{$item?->id}}"> {{$item?->name}} </span></h5>
                         </div>
                     @endforeach
-                    <div class="col-6 mb-3 mt-2">
-                        <div class="d-flex flex-row justify-content-center  vip-base">
+                    <div class="col-6 mb-3">
+                        <div class="d-flex flex-row justify-content-center vip-base">
                             <img class="img-vip" src="{{url('images/system/vip.jpg')}}" class="w-100 h-100" />
                         </div>
-                        <h5 class="text-center fs-13"><span class="count-click"> dfgd </span></h5>
+                        <h5 class="text-center fs-13  mt-1"><span class="count-click"> 免费领取会员 </span></h5>
                     </div>
                 </div>
             </div>

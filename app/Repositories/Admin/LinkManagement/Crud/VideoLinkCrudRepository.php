@@ -59,7 +59,7 @@ class  VideoLinkCrudRepository extends BaseRepository implements IVideoLinkCrudR
             return  Carbon::parse($item->created_at)->format('d-m-Y');
         })
         ->addColumn('image', function($item) {
-            $image = getRowImage($item);
+            $image = getRowImage(row: $item,col:'image', ext: '80X80');
             return  "<img src='$image'  class='img-fluid'/>";
         })
         ->escapeColumns([])
