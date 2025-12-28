@@ -31,7 +31,7 @@ class ValidateUpdateVideoLink extends FormRequest
         $rules =  [
             'product_url' => 'required|string|url|max:253',
             'image' => 'nullable|file|mimes:png,jpg,JPEG,JPG,webp,gif|max:2048',
-            'content' => 'required|string',
+            'content' => 'nullable|string',
             'keywords' => 'nullable|string|max:253',
         ];
         if($row->isDirty('name')) {
