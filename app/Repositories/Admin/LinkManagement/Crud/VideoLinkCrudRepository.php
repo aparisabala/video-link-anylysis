@@ -13,7 +13,7 @@ use Illuminate\Http\JsonResponse;
 use Auth;
 use DB;
 use Webpatser\Uuid\Uuid;
-
+use File;
 class  VideoLinkCrudRepository extends BaseRepository implements IVideoLinkCrudRepository {
 
     use BaseTrait;
