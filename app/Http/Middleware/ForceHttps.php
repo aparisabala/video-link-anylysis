@@ -15,11 +15,11 @@ class ForceHttps
      */
     public function handle($request, Closure $next)
     {
-        if (env('SERVER_MODE') == "SERVER") {
-            if (!$request->secure()) {
-                return redirect()->secure($request->getRequestUri());
-            }
-        }
+        // if (env('SERVER_MODE') == "SERVER") {
+        //     if (!$request->secure()) {
+        //         return redirect()->secure($request->getRequestUri());
+        //     }
+        // }
         return $next($request);
     }
 }

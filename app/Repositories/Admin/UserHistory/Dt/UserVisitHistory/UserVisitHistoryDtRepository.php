@@ -36,7 +36,7 @@ class UserVisitHistoryDtRepository extends BaseRepository implements IUserVisitH
      */
     public function list($request) : JsonResponse
     {
-        $model = IpTracking::with(['product'])->withCount('ips');
+        $model = IpTracking::with(['product'])->withCount('ips')->orderBy('id','DESC');
         $this->saveTractAction(
             $this->getTrackData(
                 title: 'IpTracking was viewed by '.$request?->auth?->name.' at '.Carbon::now()->format('d M Y H:i:s A'),
